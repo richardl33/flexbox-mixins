@@ -1,8 +1,6 @@
 /* 
 *
-*
-Flexbox Cross Browser Sass/SCSS Mixins 
-*
+* Flexbox Cross Browser Sass/SCSS Mixins 
 *
 */
 
@@ -54,19 +52,19 @@ Flexbox Cross Browser Sass/SCSS Mixins
 
 /* Flex Wrap */
 @mixin flex-wrap($value: nowrap) {
-  // No Webkit/FF Box fallback.
+  /* No Webkit/FF Box fallback */
   -webkit-flex-wrap: $value;
   @if $value == nowrap {
     -ms-flex-wrap: none;
   } @else {
     -ms-flex-wrap: $value;
   }
-    flex-wrap: $value;
+  flex-wrap: $value;
 }
 
 /* Flex Flow */
 @mixin flex-flow($values: (row nowrap)) {
-  // No Webkit/FF Box fallback.
+  /* No Webkit/FF Box fallback */
   -webkit-flex-flow: $values;
   -ms-flex-flow: $values;
   flex-flow: $values;
@@ -132,13 +130,13 @@ Flexbox Cross Browser Sass/SCSS Mixins
 /* Align Items */
 @mixin align-items($value: stretch) {
   @if $value == flex-start {
-    -webkit-box-align: start;
-    -moz-box-align: start;
-    -ms-flex-align: start;
+      -webkit-box-align: start;
+      -moz-box-align: start;
+      -ms-flex-align: start;
   } @else if $value == flex-end {
-    -webkit-box-align: end;
-    -moz-box-align: end;
-    -ms-flex-align: end;
+      -webkit-box-align: end;
+      -moz-box-align: end;
+      -ms-flex-align: end;
   } @else {
     -webkit-box-align: $value;
     -moz-box-align: $value;
@@ -150,7 +148,7 @@ Flexbox Cross Browser Sass/SCSS Mixins
 
 /* Align Self */
 @mixin align-self($value: auto) {
-  // No Webkit Box Fallback.
+  /* No Webkit Box Fallback */
   -webkit-align-self: $value;
   @if $value == flex-start {
     -ms-flex-item-align: start;
@@ -164,7 +162,7 @@ Flexbox Cross Browser Sass/SCSS Mixins
 
 /* Align Content */
 @mixin align-content($value: stretch) {
-  // No Webkit Box Fallback.
+  /* No Webkit Box Fallback */
   -webkit-align-content: $value;
   @if $value == flex-start {
     -ms-flex-line-pack: start;
